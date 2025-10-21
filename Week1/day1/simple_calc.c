@@ -1,0 +1,63 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   simple_calc.c                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: lnadifi <lnadifi@pooler.42.fr>             +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/10/21 21:18:16 by lnadifi           #+#    #+#             */
+/*   Updated: 2025/10/21 21:23:52 by lnadifi          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include <stdio.h>
+
+int	main(void)
+{
+	int	c;
+	int	d;
+	char	op;
+	double	res;
+
+	printf("Enter first number: ");
+	scanf("%d", &c);
+	printf("Choose operation (+, -, *, /, %%): ");
+	scanf(" %c", &op);
+	printf("Enter second number: ");
+	scanf("%d", &d);
+	switch (op)
+	{
+		case '+':
+			res = c + d;
+			printf("%d + %d = %f\n", c, d, res);
+			break;
+		case '-':
+			res = c - d;
+			printf("%d - %d = %f\n", c, d, res);
+			break;
+		case '*':
+			res = c * d;
+			printf("%d * %d = %f\n", c, d, res);
+			break;
+		case '/':
+			if (d == 0) 
+			{
+				printf("Cannot divide by zero..\n");
+			}else {
+				res = c / d;
+				printf("%d / %d = %f\n", c, d, res);
+			}
+			break;
+		case '%':
+			if (d == 0) {
+				printf("Error!\n");
+			}else {
+				res = c % d;
+				printf("%d %% %d = %f\n", c, d, res);
+			}
+			break;
+		default:
+			printf("Error! operator is not correct\n");
+	}
+	return (0);
+}
