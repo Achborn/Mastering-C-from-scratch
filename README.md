@@ -1,6 +1,5 @@
-# 🚀 My Journey in Learning C from Scratch
-
-    A 6-month self-taught journey to master the C programming language through daily practice, exercises, and projects.
+## 🚀 My Journey in Learning C from Scratch
+A 6-month self-taught journey to master the C programming language through daily practice, exercises, and projects.
 
 ## 🎯 Learning Objectives
 - [ ] Master C fundamentals (pointers, memory management, structs)
