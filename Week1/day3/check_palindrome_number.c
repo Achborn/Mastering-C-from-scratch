@@ -6,7 +6,7 @@
 /*   By: lnadifi <lnadifi@pooler.42.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/25 17:13:58 by lnadifi           #+#    #+#             */
-/*   Updated: 2025/10/25 20:46:00 by lnadifi          ###   ########.fr       */
+/*   Updated: 2025/10/26 12:30:22 by lnadifi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int	main(void)
 	printf("Enter a random number: ");
 	scanf("%d", &number);
 	original_number = number;
-	while(number > 0)
+	while (number > 0)
 	{
 		digit = number % 10;
 		rev = rev * 10 + digit;

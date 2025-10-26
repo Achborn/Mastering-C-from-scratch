@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   sum_of_digits.c                                    :+:      :+:    :+:   */
+/*   factorial_of_number_loop.c                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lnadifi <lnadifi@pooler.42.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/24 21:43:50 by lnadifi           #+#    #+#             */
-/*   Updated: 2025/10/26 12:31:18 by lnadifi          ###   ########.fr       */
+/*   Created: 2025/10/25 21:30:55 by lnadifi           #+#    #+#             */
+/*   Updated: 2025/10/26 12:29:16 by lnadifi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,26 +14,26 @@
 
 int	main(void)
 {
-	int	num;
-	int	sum;
-	int	last_digit;
+	int	n;
+	int	f;
+	int	fact;
 
-	sum = 0;
-	printf("Enter random numbers: ");
-	scanf("%d", &num);
-	if (num == 0)
+	f = 0;
+	fact = 1;
+	printf("Enter a number: ");
+	scanf("%d", &n);
+	if (n == 0)
 	{
-		return (0);
+		return (1);
 	}
 	else
 	{
-		while (num > 0)
+		while (n > 0)
 		{
-			last_digit = num % 10;
-			sum += last_digit;
-			num /= 10;
+			f = fact = fact * n;
+			n--;
 		}
-		printf("%d\n", sum);
 	}
+	printf("%d\n", f);
 	return (0);
 }
