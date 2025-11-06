@@ -1,61 +1,45 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   function_to_print_all_primes_in_range.c            :+:      :+:    :+:   */
+/*   function_to_convert_decimal_to_binary.c            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lnadifi <lnadifi@pooler.42.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/02 17:06:50 by lnadifi           #+#    #+#             */
-/*   Updated: 2025/11/06 18:20:03 by lnadifi          ###   ########.fr       */
+/*   Updated: 2025/11/06 18:12:28 by lnadifi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-int	is_prime(int a)
+void	binary(int a)
 {
-	int	i;
+	int	quotient;
+	int	remainder;
+	int	bin;
+	int	position;
 
-	i = 2;
-	if (a <= 1)
+	remainder = 0;
+	bin = 0;
+	quotient = 0;
+	position = 1;
+	while (a != 0)
 	{
-		return (0);
+		quotient = a / 2;
+		bin = a % 2;
+		remainder = remainder + (bin * position);
+		position *= 10;
+		a = quotient;
 	}
-	while (i < a)
-	{
-		if (a % i == 0)
-		{
-			return (0);
-		}
-		i++;
-	}
-	return (1);
-}
-
-void	display_prime(int k, int l)
-{
-	int	j;
-
-	j = k;
-	while (j <= l)
-	{
-		if (is_prime(j) == 1)
-		{
-			printf("%d ", j);
-		}
-		j++;
-	}
+	printf("Binary: %d\n", remainder);
 }
 
 int	main(void)
 {
-	int	first;
-	int	last;
+	int	number;
 
-	printf("Enter first number: ");
-	scanf("%d", &first);
-	printf("Enter last number: ");
-	scanf("%d", &last);
-	display_prime(first, last);
+	printf("Enter a decimal number: ");
+	scanf("%d", &number);
+	binary(number);
 	return (0);
 }

@@ -6,13 +6,13 @@
 /*   By: lnadifi <lnadifi@pooler.42.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/02 17:06:50 by lnadifi           #+#    #+#             */
-/*   Updated: 2025/11/04 14:15:32 by lnadifi          ###   ########.fr       */
+/*   Updated: 2025/11/06 18:43:18 by lnadifi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-int	great_common_divisor(int a, int b)
+int	gcd(int a, int b)
 {
 	int	r;
 	int	tmp;
@@ -38,5 +38,5 @@ int	main(void)
 	scanf("%d", &first_num);
 	printf("Enter the second number: ");
 	scanf("%d", &second_num);
-	printf("The Great Common Divisor is: %d.\n", great_common_divisor(first_num, second_num));
+	printf("The Great Common Divisor is: %d\n", gcd(first_num, second_num));
 }
